@@ -1,0 +1,253 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h1, h2, h3, p, span, a {
+    font-family: var(--ff-primary);
+    text-decoration: none;
+    text-align: center;
+}
+
+main {
+
+    padding-top: 5em;
+    padding-bottom: 5em;
+
+    .container {
+        
+        .intro_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0em 2em;
+
+            h1 {
+                font-size: var(--fs-700);
+                font-weight: var(--fw-700);
+            }
+
+            p {
+                font-size: var(--fs-300);
+                padding-top: 2em;
+            }
+
+            button {
+                border: none;
+                border-radius: 2em;
+                background-color: var(--clr-light-pink);
+                margin: 2.5em 2em 5em 2em;
+                padding: .7em 0em;
+                min-width: 15em;
+
+                a {
+                    color: var(--clr-white);
+                    font-size: var(--fs-300);
+                }
+            }
+        }
+
+        .upper_section {
+            padding-top: 3em;
+
+            .c {
+                display: flex;
+                flex-direction: column;
+                padding: 2em 6em;
+                img {
+                    max-width: 2em;
+                }
+
+                span {
+                    font-size: 4em;
+                    font-weight: var(--fw-700);
+                }
+
+                p {
+                    font-size: var(--fs-300);
+                }
+            }
+
+            & > :last-child {
+                span {
+                    font-size: 3.5em;
+                }
+            }
+        }
+
+        .middle_section {
+
+            display: grid;
+
+            .bg {
+                background-color: var(--clr-pale-blue);
+                padding: 3em 1em;
+
+                h2 {
+                    font-size: var(--fs-600);
+                    font-weight: var(--fw-700);
+                    padding-top: 4em;
+                }
+
+                p {
+                    font-size: var(--fs-200);
+                    padding: 1em .5em 1em .5em;
+                }
+
+                img {
+                    max-width: max(100%, 4em);
+                }
+            }
+
+            .flowing {
+                background-color: var(--clr-white);
+            }
+        }
+
+        .lower_section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                font-weight: var(--fw-700);
+            }
+
+            button {
+                border: none;
+                border-radius: 2em;
+                background-color: var(--clr-light-pink);
+                padding: .7em 2em;
+                margin-top: 2em;
+
+                a {
+                    color: var(--clr-white);
+                    font-size: var(--fs-300);
+                }
+            }
+        }
+    }
+}
+
+// and (max-width: 1240px)
+
+@media (min-width: 600px) {
+    body {
+        main {
+            padding-top: 10em;
+
+            .container {
+
+                .intro_content {
+                    h1 {
+                        font-size: var(--fs-900);
+                    }
+        
+                    p {
+                        max-width: 35em;
+                        margin: 0em auto;
+                        font-size: var(--fs-400);
+                    }
+        
+                    button {
+                        min-width: 15em;
+                        padding: 1em 4em;
+                        margin: 3em auto 5em auto;
+    
+                        a {
+                            font-weight: var(--fw-700);
+                            font-size: var(--fs-400);
+                        }
+                    }
+    
+                    img {
+                        max-width: 65em;
+                    }
+                }
+
+                .upper_section {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom: 5em;
+
+                    .c {
+                        img {
+                            max-width: 2.5em;
+                        }
+                        span {
+                            font-size: 5em;
+                        }
+                    }
+
+                    & > :first-child {
+                        padding-right: 15em;
+                    }
+                }
+
+                .middle_section {
+                    .bg {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+
+                        img {
+                            padding: 6em;
+                        }
+
+                        h2 {
+                            font-size: var(--fs-800);
+                            padding-top: 6em;
+                            text-align: start;
+                        }
+
+                        p {
+                            text-align: start;
+                            font-size: var(--fs-400);
+                            max-width: 35em;
+                        }
+                    }
+
+                    .grow {
+                        div {
+                            grid-column: 1;
+                            grid-row: 1;
+                            margin-left: 7em;
+                        }
+                    }
+
+                    .flowing {
+                        div {
+                            margin-left: 7em;
+                        }
+                    }
+
+                    .users {
+                        div {
+                            grid-column: 1;
+                            grid-row: 1;
+                            margin-left: 7em;
+                        }
+                    }
+                }
+
+                .lower_section {
+                    padding-top: 8em;
+                    h2 {
+                        font-size: var(--fs-800);
+                    }
+
+                    button {
+                        width: 20em;
+                        padding: 1em 3em;
+
+                        a {
+                            font-style: var(--fs-400);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

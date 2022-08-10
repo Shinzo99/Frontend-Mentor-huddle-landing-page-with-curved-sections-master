@@ -1,0 +1,129 @@
+footer {
+    padding-top: 5em;
+
+    h3, p, a {
+        color: var(--clr-white);
+        text-align: start;
+    }
+
+    .footer_wrapper {
+        background-color: var(--clr-dark-cyan);
+        padding: 1em 1.5em;
+
+        .news_letter {
+           
+            h3 {
+                text-transform: uppercase;
+                padding: 1em 0em;
+            }
+
+            p {
+                font-size: var(--fs-200);
+            }
+
+            & > :last-child { // fix di shit cz its not working
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+
+                input {
+                    width: 100%;
+                    border-radius: .5em;
+                    border: none;
+                    height: 2.5em;
+                    margin-top: 1em;
+                }
+    
+                button {
+                    border: none;
+                    border-radius: .5em;
+                    background-color: var(--clr-light-pink);
+                    width: 10em;
+                    padding: .5em 2em;
+                    margin-top: .5em;
+    
+                    a {
+                        color: var(--clr-white);
+                        font-size: var(--fs-300);
+                    }
+                }
+            }
+        }
+
+        .huddle {
+            padding-top: 4em;
+
+            p {
+                font-size: var(--fs-200);
+                padding-top: 1em;
+                padding-bottom: 2em;
+            }
+
+            .contact {
+                display: flex;
+                align-items: center;
+                padding-top: .5em;
+
+                img {
+                    width: 1em;
+                    height: fit-content;
+                }
+
+                p {
+                    padding: 0 0 0 1em;
+                }
+            }
+        }
+
+        .socials {
+            padding-top: 3em;
+
+            i {
+                color: var(--clr-white);
+                padding: .7em;
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    footer {
+        .footer_wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5em;
+            padding: 2em 0;
+
+            .info_section {
+                grid-column: 1;
+                grid-row: 1;
+                max-width: 20em;
+                margin-left: 5em;
+
+                .huddle {
+                    padding-top: 0;
+                }
+            }
+
+            .news_letter {
+                max-width: 30em;
+
+                p {
+                    max-width: 25em;
+                    padding-bottom: 2em;
+                }
+
+                & > :last-child {
+                    flex-direction: row;
+
+                    button {
+                        padding: 0 2em;
+                        margin: 0.9em 1em 0 1em;
+                        font-size: var(--fs-400);
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,43 @@
+header {
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+
+        img {
+            max-width: max(35%, 6em);
+            height: fit-content;
+        }
+
+        button {
+            border: 1px solid var(--clr-light-pink);
+            background-color: var(--clr-white);
+            box-shadow: 0px 0px 2px 1px #00000030;
+            
+            a {
+                color: var(--clr-light-pink);
+                font-size: var(--fs-200);
+                padding: 0 1em;
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    header {
+
+        nav {
+            img {
+                max-width: max(13%, 6em);
+                margin: 3em;
+            }
+
+            button {
+                padding: .3em .7em;
+                margin-right: 2em;
+            }
+        }
+    }
+}

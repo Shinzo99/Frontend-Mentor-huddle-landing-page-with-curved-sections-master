@@ -1,0 +1,23 @@
+@media (max-width: 350px) {
+    body {
+        .display_desktop {
+            display: none;
+            img {
+                width: -webkit-fill-available;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 351px) {
+    body {
+        .display_mobile {
+            display: none;
+            width: -webkit-fill-available;
+            img {
+                width: -webkit-fill-available;
+            }
+        }
+    }
+}
