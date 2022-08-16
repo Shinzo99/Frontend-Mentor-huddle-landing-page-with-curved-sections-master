@@ -47,6 +47,7 @@ img,
 picture {
   max-width: 100%;
   display: block;
+  width: -webkit-fill-available;
 }
 
 /* Inherit fonts for inputs and buttons */

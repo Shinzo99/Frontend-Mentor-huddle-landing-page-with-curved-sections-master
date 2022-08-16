@@ -70,6 +70,7 @@ img,
 picture {
   max-width: 100%;
   display: block;
+  width: -webkit-fill-available;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -224,7 +225,7 @@ main .container .lower_section button a {
     font-size: var(--fs-400);
   }
   body main .container .intro_content img {
-    max-width: 65em;
+    width: 65em;
   }
   body main .container .upper_section {
     display: flex;
