@@ -133,7 +133,38 @@ main {
 
 // and (max-width: 1240px)
 
-@media (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 1120px) {
+    body {
+        .upper_section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5em;
+    
+            .c {
+                img {
+                    max-width: 2.5em;
+                }
+                span {
+                    font-size: 5em;
+                }
+            }
+        }
+
+        .middle_section {   
+            h2 {
+                font-size: var(--fs-800);
+            }
+
+            p {
+                font-size: var(--fs-400);
+                padding: 2em;
+            }
+        }
+    }
+}
+
+@media (min-width: 1120px) {
     body {
         main {
             padding-top: 10em;
